@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>618</width>
+    <height>425</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>618</width>
+    <height>425</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>618</width>
+    <height>425</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>WForecast</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>sunny_weather_icon_150663.png</normaloff>sunny_weather_icon_150663.png</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:2, x1:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(130, 255, 255, 45));
+
+</string>
+  </property>
+  <property name="windowFilePath">
+   <string/>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>35</width>
+    <height>35</height>
+   </size>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="maximumSize">
+    <size>
+     <width>624</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel#tess {
+  font-size: 18px;
+  margin-bottom: 10px;
+ text-shadow: 0 0 2px #fff,
+             0 0 4px 2px rgba(255,255,255,0.5),
+             0 0 6px 6px #f0f,
+             0 0 4px 7px #fff,
+             0 0 3px 15px #222,
+             -4px 0 2px 9px #f0f,
+             4px 0 2px 9px #f0f,
+             0 -4px 2px 9px #f0f,
+             0 4px 2px 9px #f0f;
+
+}</string>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>1</y>
+      <width>619</width>
+      <height>65</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item>
+      <widget class="QLabel" name="shapka">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>619</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Magneto</family>
+         <pointsize>36</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 35pt &quot;Broadway&quot;;
+
+font: 36pt &quot;Old English Text MT&quot;;
+font: 36pt &quot;Magneto&quot;;
+
+background: rgba(0,0,0,0.0);</string>
+       </property>
+       <property name="text">
+        <string>Weather Forecast</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="city">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>231</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Magneto</family>
+      <pointsize>20</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+font: 20pt &quot;Broadway&quot;;
+background: rgba(0,0,0,0.0);
+
+font: 20pt &quot;Magneto&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Ekaterinburg</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="openExternalLinks">
+     <bool>false</bool>
+    </property>
+    <property name="textInteractionFlags">
+     <set>Qt::LinksAccessibleByMouse</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="oblast">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>160</y>
+      <width>185</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+font: 10pt &quot;Broadway&quot;;
+background: rgba(0,0,0,0.0);
+
+font: 12pt &quot;Magneto&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Sverdlovsk</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="temperature">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>103</y>
+      <width>231</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+font: 40pt &quot;Broadway&quot;;
+background: rgba(0,0,0,0.0);
+
+font: 40pt &quot;Magneto&quot;;</string>
+    </property>
+    <property name="text">
+     <string>+26 °C</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="opisan">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>164</y>
+      <width>231</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+font: 10pt &quot;Broadway&quot;;
+background: rgba(0,0,0,0.0);
+
+font: 12pt &quot;Magneto&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Partly cloudy</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="vremya_city">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>180</y>
+      <width>211</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+font: 10pt &quot;Broadway&quot;;
+background: rgba(0,0,0,0.0);
+
+font: 10pt &quot;Magneto&quot;;</string>
+    </property>
+    <property name="text">
+     <string>local time:
+Mon May 22 16:15:27 2023</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="data_obnovlen">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>224</y>
+      <width>231</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+font: 10pt &quot;Broadway&quot;;
+background: rgba(0,0,0,0.0);
+
+font: 10pt &quot;Magneto&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Mon May 22 16:15:27 2023</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pic">
+    <property name="geometry">
+     <rect>
+      <x>567</x>
+      <y>12</y>
+      <width>46</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background: rgba(0,0,0,0.0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>icons.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="date_today">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>280</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;Magneto&quot;;
+color: rgb(255, 255, 255);
+background: rgba(0,0,0,0.0);</string>
+    </property>
+    <property name="text">
+     <string>23.06.2023</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="date_tomorrow">
+    <property name="geometry">
+     <rect>
+      <x>256</x>
+      <y>280</y>
+      <width>90</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;Magneto&quot;;
+color: rgb(255, 255, 255);
+background: rgba(0,0,0,0.0);</string>
+    </property>
+    <property name="text">
+     <string>24.06.2023</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="date_after_tomorrow">
+    <property name="geometry">
+     <rect>
+      <x>456</x>
+      <y>280</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;Magneto&quot;;
+color: rgb(255, 255, 255);
+background: rgba(0,0,0,0.0);</string>
+    </property>
+    <property name="text">
+     <string>25.06.2023</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="temp_today">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>380</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+font: 40pt &quot;Broadway&quot;;
+background: rgba(0,0,0,0.0);
+
+font: 15pt &quot;Magneto&quot;;</string>
+    </property>
+    <property name="text">
+     <string>26° / 7</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="temp_tomorrow">
+    <property name="geometry">
+     <rect>
+      <x>256</x>
+      <y>380</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+font: 40pt &quot;Broadway&quot;;
+background: rgba(0,0,0,0.0);
+
+font: 15pt &quot;Magneto&quot;;</string>
+    </property>
+    <property name="text">
+     <string>26° / 7</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="temp_after_tomorrow">
+    <property name="geometry">
+     <rect>
+      <x>456</x>
+      <y>380</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+font: 40pt &quot;Broadway&quot;;
+background: rgba(0,0,0,0.0);
+
+font: 15pt &quot;Magneto&quot;;</string>
+    </property>
+    <property name="text">
+     <string>26° / 7</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="wind_kph">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>204</y>
+      <width>110</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;Magneto&quot;;
+background: rgba(0,0,0,0.0);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>wind_kph</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="humidity">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>204</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;Magneto&quot;;
+background: rgba(0,0,0,0.0);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>humidity</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="chance_of_rain">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>183</y>
+      <width>191</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;Magneto&quot;;
+background: rgba(0,0,0,0.0);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>chance_of_rain</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>260</y>
+      <width>619</width>
+      <height>2</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>206</x>
+      <y>260</y>
+      <width>2</width>
+      <height>167</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>412</x>
+      <y>260</y>
+      <width>2</width>
+      <height>167</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <zorder>line_3</zorder>
+   <zorder>line_2</zorder>
+   <zorder>verticalLayoutWidget</zorder>
+   <zorder>city</zorder>
+   <zorder>oblast</zorder>
+   <zorder>temperature</zorder>
+   <zorder>opisan</zorder>
+   <zorder>vremya_city</zorder>
+   <zorder>data_obnovlen</zorder>
+   <zorder>pic</zorder>
+   <zorder>date_today</zorder>
+   <zorder>date_tomorrow</zorder>
+   <zorder>date_after_tomorrow</zorder>
+   <zorder>temp_today</zorder>
+   <zorder>temp_tomorrow</zorder>
+   <zorder>temp_after_tomorrow</zorder>
+   <zorder>wind_kph</zorder>
+   <zorder>humidity</zorder>
+   <zorder>chance_of_rain</zorder>
+   <zorder>line</zorder>
+  </widget>
+ </widget>
+ <resources>
+  <include location="test.qrc"/>
+ </resources>
+ <connections/>
+</ui>
